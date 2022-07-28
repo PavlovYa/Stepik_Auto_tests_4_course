@@ -1,9 +1,12 @@
+from lib2to3.pgen2 import driver
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 import time
 from selenium.common.exceptions import NoSuchElementException
+
+driver = webdriver.Chrome()
 
 class BasePage():
 
