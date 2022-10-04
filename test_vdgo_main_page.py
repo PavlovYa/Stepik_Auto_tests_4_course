@@ -10,31 +10,22 @@ from .pages.login_page import LoginPage
 
 link = "http://dev-brigada.mosoblgaz.ru:81/"
 
-# def test_should_be_login_field(browser):
+def test_admin_can_login(browser):
 
-#     LoginPage1 = LoginPage(browser, link)   
-#     LoginPage1.open()                      
-#     LoginPage1.should_be_login_field()          
+    Mainpage = MainPage(browser, link)
+    Loginpage = LoginPage(browser, link)
+    Loginpage.open()
+    Loginpage.admin_login()                    
+    Mainpage.should_be_main_page()          
 
-# def test_should_be_pass_field(browser):
+def test_admin_can_create_task(browser):
 
-#     LoginPage1 = LoginPage(browser, link)   
-#     LoginPage1.open()                      
-#     LoginPage1.should_be_pass_field()
-
-# def test_admin_can_login(browser):
-
-#     Mainpage = MainPage(browser, link)
-#     Loginpage = LoginPage(browser, link)
-#     Loginpage.open()
-#     Loginpage.admin_login()                    
-#     Mainpage.should_be_main_page()   
-
-# def test_guest_should_see_login_link(browser):
-
-#     Mainpage = MainPage(browser, link)
-#     Mainpage.open()
-#     Mainpage.should_be_login_link()
+    Mainpage = MainPage(browser, link)
+    Loginpage = LoginPage(browser, link)
+    Loginpage.open()
+    Loginpage.admin_login()                    
+    Mainpage.should_be_main_page() 
+    Mainpage.create_button_should_be_clickable() 
 
 # def test_should_be_login_url(browser):
 

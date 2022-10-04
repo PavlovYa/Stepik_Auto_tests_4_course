@@ -22,3 +22,15 @@ class LoginPage(BasePage):
     def should_be_pass_field(self):
         # реализуйте проверку, что есть форма регистрации на странице
         assert self.is_element_present(*LoginPageLocators.PASS_FIELD), "Pass field is not presented"
+
+    def admin_login(self):
+# сценарий для логина под петровым, осталось добавить ввод пароля и клик по кнопке. Потом этот сценарий добавить в тест для mainpage
+        login_field = self.browser.find_element(*LoginPageLocators.LOGIN_FIELD)
+        pass_field = self.browser.find_element(*LoginPageLocators.PASS_FIELD)
+        login_button = self.browser.find_element(*LoginPageLocators.LOGIN_BUTTON)
+        
+        login_field.send_keys("petrov")
+        pass_field.send_keys("123")
+        login_button.click()
+
+        
