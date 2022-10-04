@@ -10,17 +10,17 @@ from .pages.login_page import LoginPage
 
 link = "http://dev-brigada.mosoblgaz.ru:81/"
 
-# def test_should_be_login_field(browser):
+def test_should_be_login_field(browser):
 
-#     LoginPage1 = LoginPage(browser, link)   
-#     LoginPage1.open()                      
-#     LoginPage1.should_be_login_field()          
+    LoginPage1 = LoginPage(browser, link)   
+    LoginPage1.open()                      
+    LoginPage1.should_be_login_field()          
 
-# def test_should_be_pass_field(browser):
+def test_should_be_pass_field(browser):
 
-#     LoginPage1 = LoginPage(browser, link)   
-#     LoginPage1.open()                      
-#     LoginPage1.should_be_pass_field()
+    LoginPage1 = LoginPage(browser, link)   
+    LoginPage1.open()                      
+    LoginPage1.should_be_pass_field()
 
 # def test_admin_can_login(browser):
 
